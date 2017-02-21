@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Census Map: Gender</title>
+  <meta name="description" content="">
+  <meta name="author" content="Elena Paunova">
+
+
+
+<!-- leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+
+<!-- chosen -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" rel="stylesheet"/>
+<!-- slider -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery-ui-Slider-Pips/1.11.4/jquery-ui-slider-pips.min.css" />
+<!-- sass -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+
+<!-- shiv -->
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+  <header>
+    <h1>Sex and the City</h1>
+  </header>
+    <img id="spinner" src="assets/squares.gif" alt="loading..." width="40">
+  <div id="wrapper">
+    <div id="tooltip"></div>
+    <nav id="filters">
+
+      <base-indicators :default="'Income'"></base-indicators>
+      <div class="connect"> of </div>
+      <indicators :default="'allPeople'"></indicators>
+      <!-- inline styles to fit to low res projector -->
+      <div class="connect" style="clear:left; margin-top:-7px; margin-left:0px;"> for block groups with population between </div>
+      <slider style="margin-top:-4px;"></slider>
+      <div class="button remove" id="reset" @click="reset"  style="margin-top:-9px;">
+        <span>Reset</span>
+      </div>
+    </nav>
+
+
+    <div id="map"></div>
+
+    <div id="stats">
+
+      <div id="results-container">
+        <h3 id="results" v-if="isCount"> <span class="prettyNum">{{subset.length | formatNumber}}</span> <span class="prettyNum">({{ subset.length | percent }})</span> of block groups have <span class="prettyNum">total population</span> between <span class="prettyNum">{{lowerBound | formatNumber}}</span> and <span class="prettyNum">{{higherBound | formatNumber}}</span> people </h3>
+
+        <h3 id="results" v-else> <span class="prettyNum">{{subset.length | formatNumber}}</span><span class="prettyNum"> ({{ subset.length | percent }})</span> of block groups have <span class="prettyNum">{{selectedIndicator | lowercase}}</span> population between <span class="prettyNum">{{lowerBound}}%</span> and <span class="prettyNum">{{higherBound}}%</span> </h3>
+      </div>
+
+      <div class="chart-container">
+        <chart class="chart" :titled="'Median Household Income Distribution'" :id="'distribution'" v-chart-init="{type: 'distribution'}"></chart>
+      </div>
+
+      <div class="chart-container" id="geoDistribution">
+        <h3>Geographic Distribution (unit: block group)</h3>
+          <ul>
+            <template v-for="(val, key) in boroughs">
+                <li>{{key}}: <span class="prettyNum">{{val | formatNumber}}</span></li>
+            </template>
+          </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- libs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-ui-Slider-Pips/1.11.4/jquery-ui-slider-pips.min.js"></script>
+  <script src="data/hoods.js"></script>
+  <script src="data/current.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

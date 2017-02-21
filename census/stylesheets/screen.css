@@ -1,0 +1,455 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/screen.scss */
+body {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  min-width: 900px;
+  background: #f1eeeb;
+}
+
+/* line 16, ../sass/screen.scss */
+.leaflet-container a {
+  color: #222;
+}
+
+/* line 20, ../sass/screen.scss */
+.leaflet-container .leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* line 25, ../sass/screen.scss */
+h1 {
+  font-size: 21pt;
+  padding: 10px;
+  color: #222;
+  font-weight: 700;
+  margin: 20px 40px 0px 30px;
+}
+
+/* line 35, ../sass/screen.scss */
+#wrapper {
+  visibility: hidden;
+}
+
+/* line 41, ../sass/screen.scss */
+#spinner {
+  clear: both;
+  display: block;
+  width: 40px;
+  margin: 0 auto;
+  margin-top: 25%;
+}
+
+/* line 50, ../sass/screen.scss */
+#map {
+  float: left;
+  width: 70%;
+  height: 750px;
+  margin: 0px 0 0 40px;
+}
+
+/* line 58, ../sass/screen.scss */
+#tooltip {
+  position: absolute;
+  background: #222;
+  color: #fff;
+  line-height: 1.4em;
+  padding: 10px;
+  display: none;
+  z-index: 10000;
+}
+/* line 67, ../sass/screen.scss */
+#tooltip h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14pt;
+}
+/* line 73, ../sass/screen.scss */
+#tooltip span {
+  font-size: 10pt;
+}
+
+/* line 78, ../sass/screen.scss */
+#stats {
+  font-family: "Lora", "Helvetica Neue", "Arial", sans-serif;
+  float: left;
+  width: 24%;
+  min-height: 600px;
+  margin: 0px 0 0 10px;
+  background: #f9f9f9;
+}
+
+/* line 87, ../sass/screen.scss */
+#results-container {
+  float: left;
+  border-bottom: 2px solid #fff;
+  margin: 0 0 0px 0;
+  background: #222;
+  padding: 10px;
+}
+
+/* line 95, ../sass/screen.scss */
+#results {
+  clear: both;
+  padding: 10px;
+  color: #ddd;
+  margin: 0px 0 0 0;
+  display: none;
+  font-size: 10pt;
+  line-height: 1.6em;
+}
+
+/* line 106, ../sass/screen.scss */
+.error {
+  color: red;
+  margin: 20px 0 0 0;
+}
+
+/* line 111, ../sass/screen.scss */
+.prettyNum {
+  font-weight: bold;
+  color: #fff;
+  font-size: 12pt;
+}
+
+/* line 117, ../sass/screen.scss */
+#geoDistribution {
+  background: #222;
+  color: #fff;
+}
+
+/* line 122, ../sass/screen.scss */
+.chart-container {
+  float: left;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  margin: 0 0 10px 0;
+  background: #f9f9f9;
+}
+/* line 129, ../sass/screen.scss */
+.chart-container h3 {
+  margin: 10px 10px 10px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 8pt;
+}
+/* line 136, ../sass/screen.scss */
+.chart-container ul {
+  float: left;
+  padding: 10px 20px 20px 20px;
+}
+/* line 140, ../sass/screen.scss */
+.chart-container li {
+  font-size: 10pt;
+  line-height: 1.6em;
+  margin: 0px 10px 0px 10px;
+}
+
+/* line 147, ../sass/screen.scss */
+.chart {
+  clear: both;
+  padding: 10px 10px 20px 10px;
+  width: 100%;
+}
+
+/* line 155, ../sass/screen.scss */
+.viz .axis text {
+  font: 6px sans-serif;
+}
+
+/* line 161, ../sass/screen.scss */
+#filters {
+  float: left;
+  font-family: "Lora", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 14pt;
+  margin: 10px 0 20px 0;
+  padding: 20px 30px 0px 40px;
+}
+
+/* line 172, ../sass/screen.scss */
+#filters #indicators {
+  float: left;
+}
+
+/* line 176, ../sass/screen.scss */
+.connect {
+  float: left;
+  margin: 15px 10px 5px 5px;
+}
+
+/* line 182, ../sass/screen.scss */
+.chosen-container {
+  float: left;
+  margin: 10px 10px 30px 0;
+  min-width: 250px;
+  font-size: 12pt;
+  background: #fff;
+}
+
+/* line 194, ../sass/screen.scss */
+#filters .chosen-single {
+  background: none;
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: 1px solid #222;
+  color: #222;
+}
+
+/* line 203, ../sass/screen.scss */
+#filters .chosen-results li.highlighted {
+  background: none;
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #ddd;
+  color: #222;
+}
+
+/* line 213, ../sass/screen.scss */
+#circles-slider {
+  float: left;
+  margin: 18px 30px 0 40px;
+  display: none;
+}
+
+/* line 220, ../sass/screen.scss */
+.button {
+  float: left;
+  padding: 5px;
+  border: 1px solid #222;
+  font-size: 10pt;
+  cursor: pointer;
+}
+/* line 227, ../sass/screen.scss */
+.button:hover {
+  color: red;
+  transition: color 0.35s;
+}
+
+/* line 234, ../sass/screen.scss */
+#reset {
+  float: left;
+  margin: 10px 0 0 50px;
+}
+
+/* line 239, ../sass/screen.scss */
+.legend {
+  opacity: 0.9;
+  line-height: 18px;
+  color: #ddd;
+  background: #333;
+  padding: 10px;
+  -webkit-box-shadow: -1px 0px 4px 1px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: -1px 0px 4px 1px rgba(0, 0, 0, 0.27);
+  box-shadow: -1px 0px 4px 1px rgba(0, 0, 0, 0.27);
+}
+/* line 250, ../sass/screen.scss */
+.legend li {
+  cursor: pointer;
+}
+/* line 252, ../sass/screen.scss */
+.legend li span {
+  display: block;
+  float: left;
+}
+/* line 253, ../sass/screen.scss */
+.legend li .square {
+  border: 1px solid #222;
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin-right: 8px;
+  opacity: 1;
+}
+/* line 262, ../sass/screen.scss */
+.legend li:hover {
+  opacity: 0.5;
+  transition: opacity 0.35s;
+}
+/* line 267, ../sass/screen.scss */
+.legend .all {
+  clear: both;
+  padding: 0 0 5px 0;
+  margin: 0 0 5px 0;
+  border-bottom: 1px solid #222;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+/* line 281, ../sass/screen.scss */
+#circles-slider.ui-slider {
+  width: 193px;
+  background: #fffaf7;
+  border: 1px solid #222;
+  height: 10px;
+}
+
+/* line 290, ../sass/screen.scss */
+#circles-slider .ui-slider-handle {
+  height: 15px;
+  width: 15px;
+  top: -5px;
+  margin-left: -7px;
+  background: #f9f9f9;
+  border: 2px solid #222;
+  transition: all .2s ease;
+}
+
+/* line 301, ../sass/screen.scss */
+#circles-slider .ui-widget-header {
+  background: #ddd;
+  opacity: 0.6;
+}
+
+/* line 307, ../sass/screen.scss */
+#circles-slider .ui-slider-pip {
+  top: 3px;
+}
+
+/* line 311, ../sass/screen.scss */
+#circles-slider .ui-slider-pip .ui-slider-line {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  margin-left: -2px;
+  background: #222;
+}
+
+/* line 319, ../sass/screen.scss */
+#circles-slider .ui-slider-pip.ui-slider-pip-last,
+#circles-slider .ui-slider-pip.ui-slider-pip-first {
+  top: -7px;
+}
+
+/* line 323, ../sass/screen.scss */
+#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-line,
+#circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-line {
+  display: none;
+}
+
+/* line 327, ../sass/screen.scss */
+#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
+#circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label {
+  margin: 0;
+}
+
+/* line 331, ../sass/screen.scss */
+#circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label {
+  left: -2em;
+  text-align: right;
+}
+
+/* line 335, ../sass/screen.scss */
+#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label {
+  left: 2em;
+  text-align: left;
+}
+
+/* line 339, ../sass/screen.scss */
+#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
+  font-weight: normal;
+}
+
+/* line 342, ../sass/screen.scss */
+#circles-slider .ui-slider-pip.ui-slider-pip-selected {
+  font-weight: bold;
+}
+
+/* line 345, ../sass/screen.scss */
+#circles-slider .ui-slider-pip.ui-slider-pip-selected,
+#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
+  color: #222;
+}
+
+/* line 350, ../sass/screen.scss */
+.ui-slider-pips .ui-slider-pip-initial-2 {
+  color: #222;
+}
+
+/* line 354, ../sass/screen.scss */
+.ui-slider-pips [class*=ui-slider-pip-selected] {
+  color: #222;
+}
+
+/* line 357, ../sass/screen.scss */
+.ui-slider-pips [class*=ui-slider-pip-initial] {
+  color: #222;
+}
+
+/* line 361, ../sass/screen.scss */
+#circles-slider .ui-slider-label {
+  margin-left: -0.9em;
+  margin-top: 0.75em;
+  font-weight: normal;
+}
+
+/* We also use a media query so the pips do not crowd-over each other
+    when we get to a small screen size */
