@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  'use strict'
   var dataset = data;
 
   var scale = function(data, indicator) {
