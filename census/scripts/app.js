@@ -146,7 +146,7 @@ $(document).ready(function() {
 
           html = '<ul><li data-low="'+domain[0]+'" data-high="'+domain[domain.length-1]+'" class="all">All</li>';
 
-          for (let i = 0; i < domain.length; i++) {
+          for (var i = 0; i < domain.length; i++) {
             html +=
                   '<li data-cc="'+scale(domain[i] + 1)+'" data-low="'+domain[i]+'" data-high="'+(domain[i + 1] ?  domain[i + 1] : domain[i]+ 20000)+'"> <span class="square" style="background:'+scale(domain[i] + 1)+'"></span><span>' +
                   labels[i] + (labels[i + 1] ? ' &ndash; ' + labels[i + 1] + '</span></li>' : '+</span></li>');
