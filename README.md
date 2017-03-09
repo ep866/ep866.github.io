@@ -6,3 +6,8 @@
 #### ep866.github.io/p5_game
 * this is my p5 bar chart "game" that I did during workshop 2
 
+###
+
+#### Link to project 2
+
+https://ep866.github.io/xxxy/public/index.html#/
