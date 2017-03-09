@@ -1,0 +1,93 @@
+[{
+    "default": {
+        "dn": "politics",
+        "v": "politics"
+    },
+    "topics": [
+    {"dn": "•••••••••••• Topics ••••••••••••",
+    "v": "topics"},
+    {
+        "dn": "Politics",
+        "v": "politics"
+    }, {
+        "dn": "Economy",
+        "v": "economy"
+    }, {
+        "dn": "Science",
+        "v": "science"
+    }, {
+        "dn": "Religion",
+        "v": "religion"
+    }, {
+        "dn": "Health / Healthcare",
+        "v": "health"
+    }, {
+        "dn": "Equality",
+        "v": "equality"
+    }, {
+        "dn": "Civil Rights",
+        "v": "civil_rights"
+    }, {
+        "dn": "Human Rights",
+        "v": "human_rights"
+    }, {
+        "dn": "Technology",
+        "v": "technology"
+    }, {
+        "dn": "Art / Design / Fashion",
+        "v": "art"
+    }, {
+        "dn": "Culture / Lifestyle",
+        "v": "culture"
+    }, {
+        "dn": "Movies / Television",
+        "v": "movies"
+    }, {
+        "dn": "Sports",
+        "v": "sports"
+    }],
+    "keywords": [
+    {"dn": "•••••••••••• Keywords ••••••••••••",
+    "v": "keywords"
+    },
+    {
+        "dn": "President",
+        "v": "president"
+    },{
+        "dn": "Senate",
+        "v": "senate"
+    },{
+        "dn": "Rights",
+        "v": "rights"
+    },{
+        "dn": "Income",
+        "v": "income"
+    },{
+        "dn": "Feminist",
+        "v": "feminist"
+    },{
+        "dn": "LGBT",
+        "v": "lgbt"
+    },{
+        "dn": "Life",
+        "v": "life"
+    },{
+        "dn": "Sex / Sexual",
+        "v": "sex"
+    },{
+        "dn": "Career / Job",
+        "v": "career"
+    },{
+        "dn": "Family",
+        "v": "family"
+    },{
+        "dn": "Children",
+        "v": "children"
+    },{
+        "dn": "Discrimination",
+        "v": "discrimination"
+    },{
+        "dn": "Crime / Violence",
+        "v": "crime"
+    }]
+}]
