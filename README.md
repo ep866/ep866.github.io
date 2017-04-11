@@ -15,3 +15,9 @@
 #### Link to project 2 - This is the one I showed in class. The actual project + new interface were submitted on canvas. 
 
 https://ep866.github.io/xxxy/public/index.html#/
+
+####Final sketch
+
+
+
+[https://github.com/ep866/ep866.github.io/blob/master/final/index.html](https://github.com/ep866/ep866.github.io/blob/master/final/index.html)
