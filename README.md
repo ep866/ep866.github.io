@@ -16,6 +16,11 @@
 
 https://ep866.github.io/xxxy/public/index.html#/
 
+
+#### Final project sketches
+
+[https://ep866.github.io/final/index.html](https://ep866.github.io/final/index.html)
+
 #### Final sketch
 
 [https://ep866.github.io/final/final_wireframe.pdf](https://ep866.github.io/final/final_wireframe.pdf)
