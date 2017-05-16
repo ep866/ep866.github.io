@@ -28,3 +28,7 @@ https://ep866.github.io/xxxy/public/index.html#/
 #### Mobile sketch
 
 [https://ep866.github.io/final/mobile.pdf](https://ep866.github.io/final/mobile.pdf)
+
+#### Final Presentation
+
+[https://ep866.github.io/final/presentation.pdf](https://ep866.github.io/final/presentation.pdf)
